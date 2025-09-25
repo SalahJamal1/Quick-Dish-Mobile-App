@@ -46,8 +46,8 @@ export default function RootLayout() {
 
   return (
     <Provider store={store}>
-      <UserLoader />
       <StatusBar style="light" />
+      <UserLoader />
       <Stack
         screenOptions={{
           headerTitle: "Quick Dish",

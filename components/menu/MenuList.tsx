@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  FlatList,
-  Image,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { IItem } from "./menuSlice";
 import MenuItem from "./MenuItem";
 import { useRouter } from "expo-router";
@@ -28,7 +21,7 @@ export default function MenuList({ menu, item }: Props) {
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
-        data={menu}
+        data={menu ? menu : []}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return (

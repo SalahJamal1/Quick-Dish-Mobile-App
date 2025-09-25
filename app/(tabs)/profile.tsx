@@ -38,9 +38,11 @@ export default function Profile() {
           ex.
         </Text>
       </View>
-      <Link href="orders" style={styles.link}>
-        Your Order
-      </Link>
+      {Auth && (
+        <Link href="orders" style={styles.link}>
+          Your Order
+        </Link>
+      )}
       <>
         {Auth ? (
           <Pressable

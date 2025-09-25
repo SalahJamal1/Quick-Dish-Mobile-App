@@ -17,9 +17,8 @@ export default function Home() {
   useEffect(() => {
     dispatch(fetchMenu());
   }, []);
-
   const menuFilter = (catagory: string) =>
-    menu.filter((item) => item.catagory === catagory);
+    (menu ? menu : []).filter((item) => item.catagory === catagory);
 
   if (loader) return <Loader />;
   if (error) return <Error error={error} />;
